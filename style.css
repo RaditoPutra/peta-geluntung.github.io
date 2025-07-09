@@ -1,1 +1,23 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Agar body mengisi seluruh tinggi viewport */
+}
 
+h1 {
+    margin: 20px 0;
+    color: #333;
+}
+
+#mapid {
+    height: 600px; /* Atur tinggi peta sesuai keinginan Anda */
+    width: 90%;   /* Atur lebar peta */
+    max-width: 1000px; /* Batasi lebar maksimal */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
