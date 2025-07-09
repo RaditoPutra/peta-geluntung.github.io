@@ -14,7 +14,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // --- TAMBAHKAN MARKER (Penanda Lokasi) ---
 // Contoh menambahkan marker untuk lokasi tertentu di desa
 // Ganti koordinat dan teks popup sesuai kebutuhan Anda
-const koordinatKantorDesa = [-8.4234, 115.1878];
+const koordinatKantorDesa = [-8.456883, 115.171211];
 L.marker(koordinatKantorDesa)
     .addTo(mymap)
     .bindPopup('<b>Kantor Perbekel Desa Geluntung</b><br>Pusat Pemerintahan Desa.')
