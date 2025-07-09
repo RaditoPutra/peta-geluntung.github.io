@@ -14,17 +14,17 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // --- TAMBAHKAN MARKER (Penanda Lokasi) ---
 // Contoh menambahkan marker untuk lokasi tertentu di desa
 // Ganti koordinat dan teks popup sesuai kebutuhan Anda
-const koordinatBalaiDesa = [-8.4230, 115.1872]; // Contoh: Balai Desa Geluntung
-L.marker(koordinatBalaiDesa)
+const koordinatKantorDesa = [-8.4234, 115.1878];
+L.marker(koordinatKantorDesa)
     .addTo(mymap)
-    .bindPopup('<b>Balai Desa Geluntung</b><br>Pusat Pemerintahan Desa.')
-    .openPopup(); // Marker akan otomatis menampilkan popup saat peta dimuat
+    .bindPopup('<b>Kantor Perbekel Desa Geluntung</b><br>Pusat Pemerintahan Desa.')
+    .openPopup();
 
 // Contoh marker lain
-const koordinatSekolah = [-8.4200, 115.1850]; // Contoh: Sekolah Dasar
-L.marker(koordinatSekolah)
+const koordinatSDN1Geluntung = [-8.4230, 115.1872];
+L.marker(koordinatSDN1Geluntung)
     .addTo(mymap)
-    .bindPopup('Sekolah Dasar Geluntung');
+    .bindPopup('<b>SD NEGERI 1 GELUNTUNG</b><br>Sekolah Dasar di Desa Geluntung.');
 
 // --- MENAMBAHKAN LINGKARAN (Opsional) ---
 // Contoh menambahkan lingkaran untuk area tertentu
