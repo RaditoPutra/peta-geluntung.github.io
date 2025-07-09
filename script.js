@@ -1,4 +1,4 @@
-const pusatDesaGeluntung = [-8.4230, 115.1872]; // Ini adalah contoh koordinat di Bali. MOHON GANTI DENGAN YANG AKURAT!
+const pusatDesaGeluntung = [-8.45688550301095, 115.17126125700298]; // Ini adalah contoh koordinat di Bali. MOHON GANTI DENGAN YANG AKURAT!
 const tingkatZoomAwal = 14; // Tingkat zoom awal (semakin besar angka, semakin dekat)
 
 // --- INISIALISASI PETA ---
