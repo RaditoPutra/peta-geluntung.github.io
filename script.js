@@ -16,6 +16,12 @@ L.marker(koordinatKantorDesa)
     .bindPopup('<b>Kantor Perbekel Desa Geluntung</b><br>Pusat Pemerintahan Desa.')
     .openPopup();
 
+const koordinatSDGeluntung = [-8.460767, 115.169747];
+L.marker(koordinatSDGeluntung)
+    .addTo(mymap)
+    .bindPopup('<b>Kantor Perbekel Desa Geluntung</b><br>Pusat Pemerintahan Desa.')
+    .openPopup();
+
 // --- MENAMBAHKAN POLYGON ---
 // Koordinat diurutkan ulang untuk membentuk poligon yang benar
 const koordinatPolygonSawah = [
