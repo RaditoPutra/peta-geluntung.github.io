@@ -21,10 +21,7 @@ L.marker(koordinatKantorDesa)
     .openPopup();
 
 // Contoh marker lain
-const koordinatSDN1Geluntung = [-8.4230, 115.1872];
-L.marker(koordinatSDN1Geluntung)
-    .addTo(mymap)
-    .bindPopup('<b>SD NEGERI 1 GELUNTUNG</b><br>Sekolah Dasar di Desa Geluntung.');
+
 
 // --- MENAMBAHKAN LINGKARAN (Opsional) ---
 // Contoh menambahkan lingkaran untuk area tertentu
