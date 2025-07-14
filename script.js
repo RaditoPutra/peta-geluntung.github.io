@@ -35,9 +35,9 @@ L.circle([-8.4250, 115.1890], {
 // --- MENAMBAHKAN POLYGON (Opsional) ---
 // Contoh menambahkan poligon untuk area persawahan atau batas RT/RW
 const koordinatPolygonSawah = [
-    [-8.4260, 115.1800],
-    [-8.4250, 115.1820],
-    [-8.4240, 115.1810],
+    [-8.454654, 115.167012],
+    [-8.464189, 115.176642],
+    [-8.464189, 115.176642],
     [-8.464129, 115.169771]
 ];
 L.polygon(koordinatPolygonSawah, {
