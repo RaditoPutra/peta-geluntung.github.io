@@ -38,7 +38,7 @@ const koordinatPolygonSawah = [
     [-8.4260, 115.1800],
     [-8.4250, 115.1820],
     [-8.4240, 115.1810],
-    [-8.4255, 115.1790]
+    [-8.464129, 115.169771]
 ];
 L.polygon(koordinatPolygonSawah, {
     color: 'green',
