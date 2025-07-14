@@ -19,7 +19,7 @@ L.marker(koordinatKantorDesa)
 const koordinatSDGeluntung = [-8.460767, 115.169747];
 L.marker(koordinatSDGeluntung)
     .addTo(mymap)
-    .bindPopup('<b>Kantor Perbekel Desa Geluntung</b><br>Pusat Pemerintahan Desa.')
+    .bindPopup('<b>SDN 1 Geluntung</b><br>Sekolah Dasar Negeri Geluntung.')
     .openPopup();
 
 // --- MENAMBAHKAN POLYGON ---
