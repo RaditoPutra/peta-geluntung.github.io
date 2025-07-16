@@ -25,7 +25,7 @@ L.marker(koordinatSDGeluntung)
     .bindPopup('<b>SDN 1 Geluntung</b><br>Sekolah Dasar Negeri Geluntung.');
 
 // --- MENAMBAHKAN POLYGON (DENGAN KOORDINAT BARU) ---
-const koordinatPolygonSawah = [
+const koordinatPolygonGeluntung = [
     [-8.452054765230011, 115.1615312873761],
     [-8.452283965716168, 115.16206789559934],
     [-8.45285696633546, 115.16179959148774],
@@ -155,11 +155,11 @@ const koordinatPolygonSawah = [
     [-8.452274200284698, 115.16143923932059]
 ];
 
-L.polygon(koordinatPolygonSawah, {
+L.polygon(koordinatPolygonGeluntung, {
     color: 'green',
     fillColor: '#32a852',
     fillOpacity: 0.4
-}).addTo(mymap).bindPopup('Area Persawahan');
+}).addTo(mymap).bindPopup('Wilayah Geluntung');
 
 const legend = L.control({ position: 'topright' });
 
@@ -174,12 +174,12 @@ legend.onAdd = function (map) {
 
     // Item untuk Lokasi Penting (Marker)
     labels.push(
-        '<img src="' + markerIconUrl + '"> Lokasi Penting'
+        '<img src="' + markerIconUrl + '"> Tempat Penting'
     );
 
     // Item untuk Area Persawahan (Polygon)
     labels.push(
-        '<i style="background: #32a852"></i> Area Persawahan'
+        '<i style="background: #32a852"></i> Wilayah Geluntung'
     );
 
     div.innerHTML = labels.join('<br>');
