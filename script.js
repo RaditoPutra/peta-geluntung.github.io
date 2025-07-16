@@ -1,58 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Peta Interaktif Desa</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+// 1. Inisialisasi peta. Anda tidak perlu menentukan pusat peta
+// karena kita akan menggunakan fitBounds nanti.
+const mymap = L.map('mapid');
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+// 2. Tambahkan dasar peta dari OpenStreetMap.
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(mymap);
 
-    <style>
-        /* CSS untuk memastikan peta tampil penuh */
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        /* Memberi ukuran pada div peta */
-        #mapid {
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-</head>
-<body>
-
-<div id="mapid"></div>
-
-<script>
-    // --- PUSAT PETA & TINGKAT ZOOM ---
-    const pusatDesaGeluntung = [-8.45688550301095, 115.17126125700298];
-    const tingkatZoomAwal = 14;
-
-    // --- INISIALISASI PETA ---
-    const mymap = L.map('mapid').setView(pusatDesaGeluntung, tingkatZoomAwal);
-
-    // --- TAMBAHKAN TILE LAYER (Dasar Peta dari OpenStreetMap) ---
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(mymap);
-
-    // --- TAMBAHKAN MARKER (Penanda Lokasi) ---
-    const koordinatKantorDesa = [-8.45688550301095, 115.17126125700298];
-    L.marker(koordinatKantorDesa)
-        .addTo(mymap)
-        .bindPopup('<b>Kantor Perbekel Desa Geluntung</b><br>Pusat Pemerintahan Desa.')
-        .openPopup();
-
-    const koordinatSDGeluntung = [-8.458973, 115.170333];
-    L.marker(koordinatSDGeluntung)
-        .addTo(mymap)
-        .bindPopup('<b>SDN 1 Geluntung</b><br>Sekolah Dasar Negeri Geluntung.'); // Dihapus .openPopup() agar tidak semua popup terbuka bersamaan
-
-    // --- MENAMBAHKAN POLYGON ---
-    const koordinatPolygonSawah = [
+// 3. Data poligon dalam format Google Maps (Latitude, Longitude).
+const koordinatBatasDesa = [
     [-8.459730, 115.170333], [-8.459960, 115.170870], [-8.460539, 115.170599],
     [-8.460739, 115.170949], [-8.460190, 115.171205], [-8.460788, 115.172643],
     [-8.460495, 115.172704], [-8.460081, 115.172673], [-8.459400, 115.172600],
@@ -95,17 +51,15 @@
     [-8.463589, 115.168016], [-8.462949, 115.168340], [-8.462199, 115.168971],
     [-8.461959, 115.169080], [-8.460489, 115.169027], [-8.459569, 115.169408],
     [-8.458589, 115.169537], [-8.458089, 115.169564], [-8.457289, 115.169467],
-    [-8.457009, 115.169487], [-8.459730, 115.170333] 
-    ];
-    
-    // **PERBAIKAN:** Menggunakan variabel 'koordinatPolygonSawah' yang sudah didefinisikan
-    L.polygon(koordinatPolygonSawah, {
-        color: 'green',
-        fillColor: '#32a852',
-        fillOpacity: 0.4
-    }).addTo(mymap).bindPopup('Area Persawahan');
+    [-8.457009, 115.169487], [-8.459730, 115.170333]
+];
 
-</script>
+// 4. Membuat layer poligon dari data di atas.
+const polygonLayer = L.polygon(koordinatBatasDesa, {
+    color: 'green',
+    fillColor: '#32a852',
+    fillOpacity: 0.4
+}).addTo(mymap).bindPopup('Batas Desa');
 
-</body>
-</html>
+// 5. Secara otomatis zoom dan pusatkan peta ke area poligon.
+mymap.fitBounds(polygonLayer.getBounds());
