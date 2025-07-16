@@ -160,3 +160,30 @@ L.polygon(koordinatPolygonSawah, {
     fillColor: '#32a852',
     fillOpacity: 0.4
 }).addTo(mymap).bindPopup('Area Persawahan');
+
+const legend = L.control({ position: 'topright' });
+
+legend.onAdd = function (map) {
+    const div = L.DomUtil.create('div', 'info legend');
+    const labels = [
+        '<strong>Legenda</strong>'
+    ];
+    
+    // URL untuk ikon marker biru default dari Leaflet
+    const markerIconUrl = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png';
+
+    // Item untuk Lokasi Penting (Marker)
+    labels.push(
+        '<img src="' + markerIconUrl + '"> Lokasi Penting'
+    );
+
+    // Item untuk Area Persawahan (Polygon)
+    labels.push(
+        '<i style="background: #32a852"></i> Area Persawahan'
+    );
+
+    div.innerHTML = labels.join('<br>');
+    return div;
+};
+
+legend.addTo(mymap);
