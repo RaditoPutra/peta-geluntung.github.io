@@ -1,66 +1,51 @@
-// --- PUSAT PETA & TINGKAT ZOOM ---
-const pusatDesaGeluntung = [-8.45413, 115.16835];
-const tingkatZoomAwal = 15;
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Agar body mengisi seluruh tinggi viewport */
+}
 
-// --- INISIALISASI PETA ---
-const mymap = L.map('mapid').setView(pusatDesaGeluntung, tingkatZoomAwal);
+h1 {
+    margin: 20px;
+    color: #333;
+}
 
-// --- TAMBAHKAN TILE LAYER ---
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(mymap);
+#mapid {
+    height: 600px;  /* Atur tinggi peta sesuai keinginan Anda */
+    width: 90%;     /* Atur lebar peta */
+    max-width: 1000px; /* Batasi lebar maksimal */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
 
-// --- TAMBAHKAN MARKER (Penanda Lokasi) ---
-const koordinatKantorDesa = [-8.45688550301095, 115.17126125700298];
-L.marker(koordinatKantorDesa)
-    .addTo(mymap)
-    .bindPopup('<b>Kantor Perbekel Desa Geluntung</b><br>Pusat Pemerintahan Desa.')
-    .openPopup();
+/* --- KODE BARU UNTUK LEGEND --- */
+.info.legend {
+    padding: 8px 10px;
+    font: 14px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    line-height: 24px;
+    color: #333;
+}
 
-const koordinatSDGeluntung = [-8.458973, 115.170333];
-L.marker(koordinatSDGeluntung)
-    .addTo(mymap)
-    .bindPopup('<b>SDN 1 Geluntung</b><br>Sekolah Dasar Negeri Geluntung.');
+.info.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+    border: 1px solid #555; /* Memberi garis tepi pada kotak warna */
+}
 
-// --- MENAMBAHKAN POLYGON ---
-const koordinatPolygonSawah = [
-    [-8.452054765230011, 115.1615312873761],
-    [-8.452283965716168, 115.16206789559934],
-    // ... sisa koordinat Anda
-    [-8.452274200284698, 115.16143923932059]
-];
-
-L.polygon(koordinatPolygonSawah, {
-    color: 'green',
-    fillColor: '#32a852',
-    fillOpacity: 0.4
-}).addTo(mymap).bindPopup('Area Persawahan');
-
-
-// --- KODE BARU: MEMBUAT LEGEND PETA ---
-const legend = L.control({ position: 'bottomleft' });
-
-legend.onAdd = function (map) {
-    const div = L.DomUtil.create('div', 'info legend');
-    const labels = [
-        '<strong>Legenda</strong>'
-    ];
-    
-    // URL untuk ikon marker biru default dari Leaflet
-    const markerIconUrl = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png';
-
-    // Item untuk Lokasi Penting (Marker)
-    labels.push(
-        '<img src="' + markerIconUrl + '"> Lokasi Penting'
-    );
-
-    // Item untuk Area Persawahan (Polygon)
-    labels.push(
-        '<i style="background: #32a852"></i> Area Persawahan'
-    );
-
-    div.innerHTML = labels.join('<br>');
-    return div;
-};
-
-legend.addTo(mymap);
+.info.legend img {
+    width: 16px;
+    height: 25px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
