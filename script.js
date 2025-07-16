@@ -156,7 +156,7 @@ const koordinatPolygonGeluntung = [
 ];
 
 L.polygon(koordinatPolygonGeluntung, {
-    color: 'green',
+    color: 'baby pink',
     fillColor: '#32a852',
     fillOpacity: 0.4
 }).addTo(mymap).bindPopup('Wilayah Geluntung');
