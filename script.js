@@ -1,33 +1,26 @@
-// 1. Definisi Sistem Koordinat Terproyeksi (EPSG:3857 - WGS 84 / Pseudo-Mercator)
-	// Ini memberitahu peta cara membaca koordinat meter Anda.
-	const crs = new L.Proj.CRS('EPSG:3857',
-		'+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs', {
-			resolutions: function () {
-				let level = 19;
-				const resolutions = [];
-				resolutions[0] = 156543.03392804097; // Resolusi zoom level 0
-				for (let i = 1; i < level; i++) {
-					resolutions[i] = resolutions[i - 1] / 2;
-				}
-				return resolutions;
-			}(),
-			origin: [0, 0]
-		});
-
-	// 2. Inisialisasi Peta dengan Sistem Koordinat Baru
-	const mymap = L.map('mapid', {
-		crs: crs // Menggunakan CRS yang telah kita definisikan
-	});
-
-	// 3. Tambahkan Tile Layer (Dasar Peta dari OpenStreetMap)
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(mymap);
-
-	// 4. DATA KOORDINAT BATAS DESA ANDA (dalam format meter)
-	const koordinatBatasDesa = [
-		// Data xcoord dan ycoord dari Anda ditempel di sini
-		[12819723.021884352, -944309.5283018965], [12819782.756838517, -944335.3229411951],
+const pusatDesaGeluntung = [-8.45688550301095, 115.17126125700298];
+const tingkatZoomAwal = 14;
+// --- INISIALISASI PETA ---
+const mymap = L.map('mapid').setView(pusatDesaGeluntung, tingkatZoomAwal);
+// --- TAMBAHKAN TILE LAYER (Dasar Peta) ---
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(mymap);
+// --- TAMBAHKAN MARKER (Penanda Lokasi) ---
+const koordinatKantorDesa = [-8.45688550301095, 115.17126125700298];
+L.marker(koordinatKantorDesa)
+    .addTo(mymap)
+    .bindPopup('<b>Kantor Perbekel Desa Geluntung</b><br>Pusat Pemerintahan Desa.')
+    .openPopup();
+const koordinatSDGeluntung = [-8.458973, 115.170333];
+L.marker(koordinatSDGeluntung)
+    .addTo(mymap)
+    .bindPopup('<b>SDN 1 Geluntung</b><br>Sekolah Dasar Negeri Geluntung.')
+    .openPopup();
+// --- MENAMBAHKAN POLYGON ---
+// Koordinat diurutkan ulang untuk membentuk poligon yang benar
+const koordinatPolygonPerumahan = [
+    		[12819723.021884352, -944309.5283018965], [12819782.756838517, -944335.3229411951],
 		[12819752.889361434, -944399.8095394416], [12819791.581320383, -944422.2101472535],
 		[12819820.09118487, -944361.1175804937], [12819980.28947104, -944427.6405976322],
 		[12819987.077534014, -944395.0578953603], [12819983.683502527, -944348.8990671417],
@@ -90,17 +83,10 @@
 		[12819668.167870717, -944851.4096718235], [12819662.349531023, -944689.7891248396],
 		[12819704.370873239, -944605.0999582201], [12819718.593481373, -944499.076879399],
 		[12819721.825892312, -944446.0653399883], [12819710.835695118, -944363.3156199327],
-		[12819712.775141682, -944334.2239214756],
-		[12819723.021884352, -944309.5283018965] // Titik akhir sama dengan titik awal untuk menutup poligon
-	];
-
-	// 5. Membuat Layer Poligon
-	const batasDesaLayer = L.polygon(koordinatBatasDesa, {
-		color: '#ff0000',      // Warna garis (merah)
-		weight: 2,             // Ketebalan garis
-		fillColor: '#ff7800',  // Warna isian (oranye)
-		fillOpacity: 0.3
-	}).addTo(mymap).bindPopup('<b>Batas Desa Akurat</b>');
-
-	// 6. Atur Peta agar otomatis zoom ke area poligon
-	mymap.fitBounds(batasDesaLayer.getBounds());
+		[12819712.775141682, -944334.2239214756], [12819723.021884352, -944309.5283018965] 
+];
+L.polygon(koordinatPolygonPerumahan, {
+    color: 'green',
+    fillColor: '#0f0',
+    fillOpacity: 0.3
+}).addTo(mymap).bindPopup('Area Perumahan');
