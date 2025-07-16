@@ -1,14 +1,56 @@
-// 1. Inisialisasi peta. Anda tidak perlu menentukan pusat peta
-// karena kita akan menggunakan fitBounds nanti.
-const mymap = L.map('mapid');
+const pusatDesaGeluntung = [-8.45688550301095, 115.17126125700298];
 
-// 2. Tambahkan dasar peta dari OpenStreetMap.
+const tingkatZoomAwal = 14;
+
+
+
+// --- INISIALISASI PETA ---
+
+const mymap = L.map('mapid').setView(pusatDesaGeluntung, tingkatZoomAwal);
+
+
+
+// --- TAMBAHKAN TILE LAYER (Dasar Peta) ---
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+
 }).addTo(mymap);
 
-// 3. Data poligon dalam format Google Maps (Latitude, Longitude).
-const koordinatBatasDesa = [
+
+
+// --- TAMBAHKAN MARKER (Penanda Lokasi) ---
+
+const koordinatKantorDesa = [-8.45688550301095, 115.17126125700298];
+
+L.marker(koordinatKantorDesa)
+
+    .addTo(mymap)
+
+    .bindPopup('<b>Kantor Perbekel Desa Geluntung</b><br>Pusat Pemerintahan Desa.')
+
+    .openPopup();
+
+
+
+const koordinatSDGeluntung = [-8.460767, 115.169747];
+
+L.marker(koordinatSDGeluntung)
+
+    .addTo(mymap)
+
+    .bindPopup('<b>SDN 1 Geluntung</b><br>Sekolah Dasar Negeri Geluntung.')
+
+    .openPopup();
+
+
+
+// --- MENAMBAHKAN POLYGON ---
+
+// Koordinat diurutkan ulang untuk membentuk poligon yang benar
+
+const koordinatPolygonSawah = [
     [-8.459730, 115.170333], [-8.459960, 115.170870], [-8.460539, 115.170599],
     [-8.460739, 115.170949], [-8.460190, 115.171205], [-8.460788, 115.172643],
     [-8.460495, 115.172704], [-8.460081, 115.172673], [-8.459400, 115.172600],
@@ -54,12 +96,12 @@ const koordinatBatasDesa = [
     [-8.457009, 115.169487], [-8.459730, 115.170333]
 ];
 
-// 4. Membuat layer poligon dari data di atas.
-const polygonLayer = L.polygon(koordinatBatasDesa, {
-    color: 'green',
-    fillColor: '#32a852',
-    fillOpacity: 0.4
-}).addTo(mymap).bindPopup('Batas Desa');
+L.polygon(koordinatPolygonSawah, {
 
-// 5. Secara otomatis zoom dan pusatkan peta ke area poligon.
-mymap.fitBounds(polygonLayer.getBounds());
+    color: 'green',
+
+    fillColor: '#0f0',
+
+    fillOpacity: 0.3
+
+}).addTo(mymap).bindPopup('Area Persawahan');
