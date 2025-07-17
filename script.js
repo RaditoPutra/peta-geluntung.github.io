@@ -157,7 +157,7 @@ const koordinatPolygonGeluntung = [
 
 L.polygon(koordinatPolygonGeluntung, {
     color: 'gray',
-    fillColor: '#d3d3d3',
+    fillColor: '#626f78',
     fillOpacity: 0.4
 }).addTo(mymap).bindPopup('Wilayah Geluntung');
 
@@ -279,7 +279,11 @@ legend.onAdd = function (map) {
 
     // Item untuk Area Persawahan (Polygon)
     labels.push(
-        '<i style="background: #32a852"></i> Wilayah Geluntung'
+        '<i style="background: #626f78"></i> Wilayah Geluntung'
+    );
+
+    labels.push(
+        '<i style="background: #AED776"></i> Sawah Utara'
     );
 
     div.innerHTML = labels.join('<br>');
