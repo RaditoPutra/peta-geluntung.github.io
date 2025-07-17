@@ -156,8 +156,8 @@ const koordinatPolygonGeluntung = [
 ];
 
 L.polygon(koordinatPolygonGeluntung, {
-    color: 'green',
-    fillColor: '#32a852',
+    color: 'gray',
+    fillColor: '#d3d3d3',
     fillOpacity: 0.4
 }).addTo(mymap).bindPopup('Wilayah Geluntung');
 
@@ -256,9 +256,9 @@ const koordinatSawahUtara = [
 ];
 
 L.polygon(koordinatSawahUtara, {
-    color: 'blue',
-    fillColor: '#6495ED', // Warna biru cornflower
-    fillOpacity: 0.5
+    color: 'green',
+    fillColor: '#AED776', 
+    fillOpacity: 0.2
 }).addTo(mymap).bindPopup('Area Persawahan (Utara)');
 
 const legend = L.control({ position: 'topright' });
