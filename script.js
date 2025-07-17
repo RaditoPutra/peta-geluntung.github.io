@@ -314,6 +314,13 @@ const koordinatSawahUtaraDua = [
     [-8.443712334688556, 115.17195650700118]
 ];
 
+L.polygon(koordinatSawahUtaraDua, {
+    color: 'green',
+    fillColor: '#29f705',
+    fillOpacity: 0.4,
+    weight: 1
+}).addTo(mymap).bindPopup('Area Persawahan (Utara)');
+
 const koordinatSawahUtaraTiga = [
     [-8.44558074218737, 115.17192405777685],
     [-8.44558074218737, 115.1716081048031],
