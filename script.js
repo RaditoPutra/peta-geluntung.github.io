@@ -257,7 +257,7 @@ const koordinatSawahUtara = [
 
 L.polygon(koordinatSawahUtara, {
     color: 'green',
-    fillColor: '#AED776', 
+    fillColor: '#29f705', 
     fillOpacity: 0.4,
     weight: 1 
 }).addTo(mymap).bindPopup('Area Persawahan (Utara)');
@@ -284,7 +284,7 @@ legend.onAdd = function (map) {
     );
 
     labels.push(
-        '<i style="background: #AED776"></i> Sawah Utara'
+        '<i style="background: #29f705"></i> Sawah Utara'
     );
 
     div.innerHTML = labels.join('<br>');
