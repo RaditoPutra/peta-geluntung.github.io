@@ -258,7 +258,8 @@ const koordinatSawahUtara = [
 L.polygon(koordinatSawahUtara, {
     color: 'green',
     fillColor: '#AED776', 
-    fillOpacity: 0.2
+    fillOpacity: 0.4,
+    weight: 1 
 }).addTo(mymap).bindPopup('Area Persawahan (Utara)');
 
 const legend = L.control({ position: 'topright' });
