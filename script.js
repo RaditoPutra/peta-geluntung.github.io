@@ -503,7 +503,7 @@ L.polygon(koordinatSawahTimurSatu, {
     fillColor: '#29f705', 
     fillOpacity: 0.5,
     weight: 1
-}).addTo(mymap).bindPopup('Area Sawah Timur 1');
+}).addTo(mymap).bindPopup('Area Persawahan (Timur)');
 
 const koordinatSawahTimurDua = [
     [-8.449189986569694, 115.1764601177678],
@@ -553,7 +553,7 @@ L.polygon(koordinatSawahTimurDua, {
     fillColor: '#29f705', 
     fillOpacity: 0.5,
     weight: 1
-}).addTo(mymap).bindPopup('Area Sawah Timur 2');
+}).addTo(mymap).bindPopup('Area Persawahan (Timur)');
 
 const koordinatSawahSelatanSatu = [
     [-8.452032253309634, 115.166523823707],
@@ -679,7 +679,7 @@ L.polygon(koordinatSawahSelatanSatu, {
     fillColor: '#29f705', 
     fillOpacity: 0.5,
     weight: 1
-}).addTo(mymap).bindPopup('Area Sawah Selatan 1');
+}).addTo(mymap).bindPopup('Area Persawahan (Selatan)');
 
 const koordinatSawahSelatanDua = [
     [-8.45691769344998, 115.1676996811257],
@@ -701,11 +701,11 @@ const koordinatSawahSelatanDua = [
     [-8.45737379984609, 115.16763819838486]
 ];
 L.polygon(koordinatSawahSelatanDua, {
-    color: '#D2691E', 
+    color: 'green', 
     fillColor: '#29f705', 
     fillOpacity: 0.5,
     weight: 1
-}).addTo(mymap).bindPopup('Area Sawah Selatan 2');
+}).addTo(mymap).bindPopup('Area Persawahan (Selatan)');
 
 const koordinatSawahBaratSatu = [
     [-8.453116785824415, 115.16384676269986],
@@ -775,7 +775,7 @@ L.polygon(koordinatSawahBaratSatu, {
     fillColor: '#29f705', 
     fillOpacity: 0.5,
     weight: 1
-}).addTo(mymap).bindPopup('Area Sawah Barat 1');
+}).addTo(mymap).bindPopup('Area Persawahan (Barat)');
 
 const legend = L.control({ position: 'topright' });
 
