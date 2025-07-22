@@ -1381,6 +1381,10 @@ legend.onAdd = function (map) {
         '<i style="background: #29f705"></i> Sawah'
     );
 
+    labels.push(
+        '<i style="background: #FFFF00"></i> Ladang'
+    );
+
     div.innerHTML = labels.join('<br>');
     return div;
 };
