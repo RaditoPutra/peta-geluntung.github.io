@@ -1,18 +1,12 @@
-// --- PUSAT PETA & TINGKAT ZOOM ---
-// PERBAIKAN: Pusat peta dihitung dari rata-rata koordinat poligon yang baru.
 const pusatDesaGeluntung = [-8.45413, 115.16835];
 const tingkatZoomAwal = 15;
 
-// --- INISIALISASI PETA ---
 const mymap = L.map('mapid').setView(pusatDesaGeluntung, tingkatZoomAwal);
 
-// --- TAMBAHKAN TILE LAYER (Dasar Peta dari OpenStreetMap) ---
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(mymap);
 
-// --- TAMBAHKAN MARKER (Penanda Lokasi) ---
-// CATATAN: Koordinat marker ini belum diubah. Anda mungkin perlu menyesuaikannya.
 const koordinatKantorDesa = [-8.45688550301095, 115.17126125700298];
 L.marker(koordinatKantorDesa)
     .addTo(mymap)
@@ -24,7 +18,6 @@ L.marker(koordinatSDGeluntung)
     .addTo(mymap)
     .bindPopup('<b>SDN 1 Geluntung</b><br>Sekolah Dasar Negeri Geluntung.');
 
-// --- MENAMBAHKAN POLYGON (DENGAN KOORDINAT BARU) ---
 const koordinatPolygonGeluntung = [
     [-8.442574859092373, 115.17187364527881],
     [-8.442574859092373, 115.17192098478618],
@@ -591,6 +584,57 @@ L.polygon(koordinatSawahTimurTiga, {
     fillOpacity: 0.5,
     weight: 1
 }).addTo(mymap).bindPopup('Area Sawah Timur 3');
+
+const koordinatSawahTimurEmpat = [
+    [-8.451045162086453, 115.17524001024833],
+    [-8.451123204554001, 115.17567921567792],
+    [-8.452340665002614, 115.17511903150721],
+    [-8.452452525492038, 115.17540832849679],
+    [-8.452959799397242, 115.17528471978305],
+    [-8.452824526421113, 115.17493493342293],
+    [-8.454015967540391, 115.17449572799332],
+    [-8.453820862805728, 115.17413542174266],
+    [-8.45337602364148, 115.17428270021007],
+    [-8.453300583030554, 115.17409334218054],
+    [-8.453115883541493, 115.17418276125005],
+    [-8.453071659707037, 115.17408545226267],
+    [-8.45327196762255, 115.17399866316578],
+    [-8.453113282139608, 115.17361994710672],
+    [-8.452886960108303, 115.17319652151288],
+    [-8.452566987354599, 115.17338324956981],
+    [-8.452452525492042, 115.17320967137606],
+    [-8.452821925017265, 115.17301505340123],
+    [-8.45276209272382, 115.17284410518013],
+    [-8.453149701764419, 115.17268630682217],
+    [-8.453006624647156, 115.17249431882001],
+    [-8.452821925017265, 115.17229707087259],
+    [-8.452520162051297, 115.17246275914843],
+    [-8.452340665002618, 115.17257058802636],
+    [-8.452189783360827, 115.17264422726008],
+    [-8.452322455152434, 115.17289933460542],
+    [-8.452356273444952, 115.17310447247075],
+    [-8.452299042486642, 115.17324386102028],
+    [-8.452218398849153, 115.17319652151288],
+    [-8.452174174911754, 115.17343847899507],
+    [-8.452002481930254, 115.1736120571888],
+    [-8.451828187461746, 115.17373829587518],
+    [-8.451531626543218, 115.17380930513625],
+    [-8.451398954479512, 115.17389083428783],
+    [-8.451258478127007, 115.17401181302893],
+    [-8.450941105438499, 115.1741301617974],
+    [-8.450660152348746, 115.1742669203743],
+    [-8.450907287021863, 115.1747850249829],
+    [-8.451627878796165, 115.17451413780178],
+    [-8.451804774765948, 115.1749217835598],
+    [-8.451045162086453, 115.17524001024833] 
+];
+
+L.polygon(koordinatSawahTimurEmpat, {
+    color: 'green',
+    fillColor: '#29f705',
+    fillOpacity: 0.4,
+    weight: 1
+}).addTo(mymap).bindPopup('Area Persawahan (Timur)');
 
 const koordinatSawahSelatanSatu = [
     [-8.452032253309634, 115.166523823707],
@@ -1364,15 +1408,12 @@ legend.onAdd = function (map) {
         '<strong>Legenda</strong>'
     ];
     
-    // URL untuk ikon marker biru default dari Leaflet
     const markerIconUrl = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png';
 
-    // Item untuk Lokasi Penting (Marker)
     labels.push(
         '<img src="' + markerIconUrl + '"> Tempat Penting'
     );
 
-    // Item untuk Area Persawahan (Polygon)
     labels.push(
         '<i style="background: #626f78"></i> Wilayah Geluntung'
     );
