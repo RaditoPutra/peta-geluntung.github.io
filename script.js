@@ -45,8 +45,13 @@ L.marker(koordinatPuraDangkahyangan)
 const koordinatBalaiUmaBali = [-8.448655055925355, 115.17216592210406];
 L.marker(koordinatBalaiUmaBali)
     .addTo(mymap)
-    .bindPopup('<b>Balai Banjar Adat Geluntung Uma Bali</b>')
+    .bindPopup('<b>Balai Banjar Adat Geluntung UmaBali</b>')
     .openPopup();
+
+const koordinatSDGeluntung = [-8.455886857159614, 115.17194249202919];
+L.marker(koordinatSDGeluntung)
+    .addTo(mymap)
+    .bindPopup('<b>Paon Yura</b><br>Kedai Sarapan & Makan Siang');
 
 const koordinatPolygonGeluntung = [
     [-8.442574859092373, 115.17187364527881],
