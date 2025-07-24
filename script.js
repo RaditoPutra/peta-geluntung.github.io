@@ -13,6 +13,12 @@ L.marker(koordinatKantorDesa)
     .bindPopup('<b>Kantor Perbekel Desa Geluntung</b><br>Pusat Pemerintahan Desa.')
     .openPopup();
 
+const koordinatPuraBaleagung = [-8.454457216284371, 115.16734646760814];
+L.marker(koordinatPuraBaleagung)
+    .addTo(mymap)
+    .bindPopup('<b>Pura Baleagung</b><br>Pura Baleagung Umakaang Desa Geluntung')
+    .openPopup();
+
 const koordinatSDGeluntung = [-8.458973, 115.170333];
 L.marker(koordinatSDGeluntung)
     .addTo(mymap)
