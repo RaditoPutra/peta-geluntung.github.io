@@ -24,6 +24,18 @@ L.marker(koordinatSDGeluntung)
     .addTo(mymap)
     .bindPopup('<b>SDN 1 Geluntung</b><br>Sekolah Dasar Negeri Geluntung.');
 
+const koordinatPuraDalem = [-8.462212762467773, 115.16960474301273];
+L.marker(koordinatPuraDalem)
+    .addTo(mymap)
+    .bindPopup('<b>Pura Baleagung</b><br>Pura Baleagung Umakaang Desa Geluntung')
+    .openPopup();
+
+const koordinatBalaiKaja = [-8.455452668509658, 115.17203222429222];
+L.marker(koordinatBalaiKaja)
+    .addTo(mymap)
+    .bindPopup('<b>Balai Banjar Adat Geluntung Kaja</b>')
+    .openPopup();
+
 const koordinatPolygonGeluntung = [
     [-8.442574859092373, 115.17187364527881],
     [-8.442574859092373, 115.17192098478618],
