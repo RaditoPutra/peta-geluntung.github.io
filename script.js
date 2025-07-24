@@ -36,6 +36,12 @@ L.marker(koordinatBalaiKaja)
     .bindPopup('<b>Balai Banjar Adat Geluntung Kaja</b>')
     .openPopup();
 
+const koordinatPuraDangkahyangan = [-8.453867708575759, 115.17301281550921];
+L.marker(koordinatPuraDangkahyangan)
+    .addTo(mymap)
+    .bindPopup('<b>Pura Dangkahyangan Desa</b><br>Geluntung - Marga')
+    .openPopup();
+
 const koordinatPolygonGeluntung = [
     [-8.442574859092373, 115.17187364527881],
     [-8.442574859092373, 115.17192098478618],
