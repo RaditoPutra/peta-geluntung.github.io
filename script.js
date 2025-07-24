@@ -59,7 +59,7 @@ L.marker(koordinatPuraPuseh)
     .bindPopup('<b>Pura Desa Lan Puseh</b><br>Br. Adat Umabali Marga Tabanan');
 
 const koordinatSubak = [-8.44569537335671, 115.17226301322616];
-L.marker(koordinatSubak)-8.4452948166838, 115.17174789566441
+L.marker(koordinatSubak)
     .addTo(mymap)
     .bindPopup('<b>Bale Subak Umabali</b><br>Balai Pertemuan Desa');
 
