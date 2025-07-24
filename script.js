@@ -42,6 +42,12 @@ L.marker(koordinatPuraDangkahyangan)
     .bindPopup('<b>Pura Dangkahyangan Desa</b><br>Geluntung - Marga')
     .openPopup();
 
+const koordinatBalaiUmaBali = [-8.448655055925355, 115.17216592210406];
+L.marker(koordinatBalaiUmaBali)
+    .addTo(mymap)
+    .bindPopup('<b>Balai Banjar Adat Geluntung Uma Bali</b>')
+    .openPopup();
+
 const koordinatPolygonGeluntung = [
     [-8.442574859092373, 115.17187364527881],
     [-8.442574859092373, 115.17192098478618],
