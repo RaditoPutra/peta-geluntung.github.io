@@ -45,13 +45,24 @@ L.marker(koordinatPuraDangkahyangan)
 const koordinatBalaiUmaBali = [-8.448655055925355, 115.17216592210406];
 L.marker(koordinatBalaiUmaBali)
     .addTo(mymap)
-    .bindPopup('<b>Balai Banjar Adat Geluntung UmaBali</b>')
+    .bindPopup('<b>Balai Banjar Adat Geluntung UmaBali</b>')-8.447287881148165, 115.1725361416199
     .openPopup();
 
 const koordinatPaonYura = [-8.455886857159614, 115.17194249202919];
 L.marker(koordinatPaonYura)
     .addTo(mymap)
     .bindPopup('<b>Paon Yura</b><br>Kedai Sarapan & Makan Siang');
+
+const koordinatPuraPuseh = [-8.447287881148165, 115.1725361416199];
+L.marker(koordinatPuraPuseh)
+    .addTo(mymap)
+    .bindPopup('<b>Pura Desa Lan Puseh</b><br>Br. Adat Umabali Marga Tabanan');
+
+const koordinatSubak = [-8.44569537335671, 115.17226301322616];
+L.marker(koordinatSubak)
+    .addTo(mymap)
+    .bindPopup('<b>Bale Subak Umabali</b><br>Balai Pertemuan Desa');
+
 
 const koordinatPolygonGeluntung = [
     [-8.442574859092373, 115.17187364527881],
