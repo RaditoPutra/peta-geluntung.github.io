@@ -22,7 +22,7 @@ L.marker(koordinatPuraBaleagung)
 const koordinatSDGeluntung = [-8.458973, 115.170333];
 L.marker(koordinatSDGeluntung)
     .addTo(mymap)
-    .bindPopup('<b>SDN 1 Geluntung</b><br>Sekolah Dasar Negeri Geluntung.');
+    .bindPopup('<b>SDN 1 Geluntung</b><br>SD, PAUD, Poskesdes Desa Geluntung');
 
 const koordinatPuraDalem = [-8.462212762467773, 115.16960474301273];
 L.marker(koordinatPuraDalem)
