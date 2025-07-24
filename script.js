@@ -48,8 +48,8 @@ L.marker(koordinatBalaiUmaBali)
     .bindPopup('<b>Balai Banjar Adat Geluntung UmaBali</b>')
     .openPopup();
 
-const koordinatSDGeluntung = [-8.455886857159614, 115.17194249202919];
-L.marker(koordinatSDGeluntung)
+const koordinatPaonYura = [-8.455886857159614, 115.17194249202919];
+L.marker(koordinatPaonYura)
     .addTo(mymap)
     .bindPopup('<b>Paon Yura</b><br>Kedai Sarapan & Makan Siang');
 
