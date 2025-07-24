@@ -45,7 +45,7 @@ L.marker(koordinatPuraDangkahyangan)
 const koordinatBalaiUmaBali = [-8.448655055925355, 115.17216592210406];
 L.marker(koordinatBalaiUmaBali)
     .addTo(mymap)
-    .bindPopup('<b>Balai Banjar Adat Geluntung UmaBali</b>')-8.447287881148165, 115.1725361416199
+    .bindPopup('<b>Balai Banjar Adat Geluntung UmaBali</b>')
     .openPopup();
 
 const koordinatPaonYura = [-8.455886857159614, 115.17194249202919];
