@@ -59,10 +59,14 @@ L.marker(koordinatPuraPuseh)
     .bindPopup('<b>Pura Desa Lan Puseh</b><br>Br. Adat Umabali Marga Tabanan');
 
 const koordinatSubak = [-8.44569537335671, 115.17226301322616];
-L.marker(koordinatSubak)
+L.marker(koordinatSubak)-8.4452948166838, 115.17174789566441
     .addTo(mymap)
     .bindPopup('<b>Bale Subak Umabali</b><br>Balai Pertemuan Desa');
 
+const koordinatPuraDalemUmaBali = [-8.445253582885032, 115.1717389629899];
+L.marker(koordinatPuraDalemUmaBali)
+    .addTo(mymap)
+    .bindPopup('<b>Pura Dalem Umabali</b>');
 
 const koordinatPolygonGeluntung = [
     [-8.442574859092373, 115.17187364527881],
