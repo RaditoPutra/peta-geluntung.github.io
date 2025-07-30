@@ -464,7 +464,7 @@ L.polygon(koordinatSawahUtaraEmpat, {
     fillColor: '#29f705',
     fillOpacity: 0.4,
     weight: 1
-}).addTo(mymap).bindPopup('Area Persawahan (Utara)');
+}).addTo(mymap).bindPopup('Area Persawahan (Utara)<br> Luas Area 4,816.04 m2');
 
 const koordinatSawahUtaraLima = [
    [-8.449342025142512, 115.16880466260649], [-8.449311617432741, 115.1683537891737], [-8.449345403776782, 115.16819325090596],
