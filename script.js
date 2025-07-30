@@ -549,7 +549,7 @@ L.polygon(koordinatSawahTimurSatu, {
     fillColor: '#29f705', 
     fillOpacity: 0.5,
     weight: 1
-}).addTo(mymap).bindPopup('Area Persawahan (Timur)');
+}).addTo(mymap).bindPopup('Area Persawahan (Utara) <br> 2,779.91 m2');
 
 const koordinatSawahTimurDua = [
     [-8.449189986569694, 115.1764601177678],
