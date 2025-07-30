@@ -306,7 +306,7 @@ L.polygon(koordinatSawahUtara, {
     fillColor: '#29f705',
     fillOpacity: 0.4,
     weight: 1
-}).addTo(mymap).bindPopup('Area Persawahan (Utara) <br> Luas Area  m2');
+}).addTo(mymap).bindPopup('Area Persawahan (Utara) <br> Luas Area 122,574.94 m2');
 
 const koordinatSawahUtaraDua = [
     [-8.443072073618518, 115.17182414832297],
@@ -365,7 +365,7 @@ L.polygon(koordinatSawahUtaraDua, {
     fillColor: '#29f705',
     fillOpacity: 0.4,
     weight: 1
-}).addTo(mymap).bindPopup('Area Persawahan (Utara)');
+}).addTo(mymap).bindPopup('Area Persawahan (Utara) <br> Luas Area 13,574.92 m2');
 
 const koordinatSawahUtaraTiga = [
     [-8.44558074218737, 115.17192405777685], [-8.44558074218737, 115.1716081048031], [-8.44557060618556, 115.17136558954758],
@@ -517,7 +517,7 @@ L.polygon(koordinatSawahUtaraEnam, {
     fillColor: '#29f705',
     fillOpacity: 0.4,
     weight: 1
-}).addTo(mymap).bindPopup('Area Persawahan (Utara)');
+}).addTo(mymap).bindPopup('Area Persawahan (Utara) <br> Luas Area 29,567.64 m2');
 
 const koordinatSawahUtaraTujuh = [
     [-8.448279443196064, 115.17149880215302],
@@ -533,7 +533,7 @@ L.polygon(koordinatSawahUtaraTujuh, {
     fillColor: '#29f705',
     fillOpacity: 0.4,
     weight: 1
-}).addTo(mymap).bindPopup('Area Persawahan (Utara)');
+}).addTo(mymap).bindPopup('Area Persawahan (Utara) <br> 2,779.91');
 
 const koordinatSawahTimurSatu = [
     [-8.448279443196064, 115.17149880215302],
