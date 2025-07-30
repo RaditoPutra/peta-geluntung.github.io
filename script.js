@@ -684,7 +684,7 @@ L.polygon(koordinatSawahTimurEmpat, {
     fillColor: '#29f705',
     fillOpacity: 0.4,
     weight: 1
-}).addTo(mymap).bindPopup('Area Persawahan (Timur) <br> Luas Area 56,354.24');
+}).addTo(mymap).bindPopup('Area Persawahan (Timur) <br> Luas Area 56,354.24 m2');
 
 const koordinatSawahSelatanSatu = [
     [-8.452032253309634, 115.166523823707],
@@ -810,7 +810,7 @@ L.polygon(koordinatSawahSelatanSatu, {
     fillColor: '#29f705', 
     fillOpacity: 0.5,
     weight: 1
-}).addTo(mymap).bindPopup('Area Persawahan (Selatan)');
+}).addTo(mymap).bindPopup('Area Persawahan (Selatan) <br> Luas Area 243,585.91 m2');
 
 const koordinatSawahSelatanDua = [
     [-8.45691769344998, 115.1676996811257],
@@ -836,7 +836,7 @@ L.polygon(koordinatSawahSelatanDua, {
     fillColor: '#29f705', 
     fillOpacity: 0.5,
     weight: 1
-}).addTo(mymap).bindPopup('Area Persawahan (Selatan)');
+}).addTo(mymap).bindPopup('Area Persawahan (Selatan) <br> Luas Area 14,801.54 m2');
 
 const koordinatSawahBaratSatu = [
     [-8.453116785824415, 115.16384676269986],
@@ -906,7 +906,7 @@ L.polygon(koordinatSawahBaratSatu, {
     fillColor: '#29f705', 
     fillOpacity: 0.5,
     weight: 1
-}).addTo(mymap).bindPopup('Area Persawahan (Barat)');
+}).addTo(mymap).bindPopup('Area Persawahan (Barat) <br> Luas Area 105,247.79 m2');
 
 const koordinatLadangUtaraSatu = [
     [-8.443168822736373, 115.17347609960817],
