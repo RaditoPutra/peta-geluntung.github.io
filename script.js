@@ -595,7 +595,7 @@ const koordinatSawahTimurDua = [
 ];
 
 L.polygon(koordinatSawahTimurDua, {
-    color: 'green', 
+    color: 'blue', 
     fillColor: '#29f705', 
     fillOpacity: 0.5,
     weight: 1
@@ -629,7 +629,7 @@ const koordinatSawahTimurTiga = [
     [-8.44633559848396, 115.176420628377]
 ];
 L.polygon(koordinatSawahTimurTiga, {
-    color: 'green', 
+    color: 'red', 
     fillColor: '#29f705', 
     fillOpacity: 0.5,
     weight: 1
