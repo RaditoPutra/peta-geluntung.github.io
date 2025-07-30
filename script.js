@@ -595,11 +595,11 @@ const koordinatSawahTimurDua = [
 ];
 
 L.polygon(koordinatSawahTimurDua, {
-    color: 'blue', 
+    color: 'green', 
     fillColor: '#29f705', 
     fillOpacity: 0.5,
     weight: 1
-}).addTo(mymap).bindPopup('Area Persawahan (Timur)');
+}).addTo(mymap).bindPopup('Area Persawahan (Timur) <br> Luas Area 16,571.79 m2');
 
 const koordinatSawahTimurTiga = [
     [-8.446246163613223, 115.17643268377948],
@@ -629,11 +629,11 @@ const koordinatSawahTimurTiga = [
     [-8.44633559848396, 115.176420628377]
 ];
 L.polygon(koordinatSawahTimurTiga, {
-    color: 'red', 
+    color: 'green', 
     fillColor: '#29f705', 
     fillOpacity: 0.5,
     weight: 1
-}).addTo(mymap).bindPopup('Area Sawah Timur 3');
+}).addTo(mymap).bindPopup('Area Persawahan (Timur) <br> Luas Area 25,513.63 m2');
 
 const koordinatSawahTimurEmpat = [
     [-8.451045162086453, 115.17524001024833],
@@ -684,7 +684,7 @@ L.polygon(koordinatSawahTimurEmpat, {
     fillColor: '#29f705',
     fillOpacity: 0.4,
     weight: 1
-}).addTo(mymap).bindPopup('Area Persawahan (Timur)');
+}).addTo(mymap).bindPopup('Area Persawahan (Timur) <br> Luas Area 56,354.24');
 
 const koordinatSawahSelatanSatu = [
     [-8.452032253309634, 115.166523823707],
