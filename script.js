@@ -27,7 +27,7 @@ L.marker(koordinatSDGeluntung)
 const koordinatPuraDalem = [-8.462212762467773, 115.16960474301273];
 L.marker(koordinatPuraDalem)
     .addTo(mymap)
-    .bindPopup('<b>Pura Baleagung</b><br>Pura Baleagung Umakaang Desa Geluntung')
+    .bindPopup('<b>Pura Dalem</b><br>Pura Dalem Desa Geluntung')
     .openPopup();
 
 const koordinatBalaiKaja = [-8.455452668509658, 115.17203222429222];
